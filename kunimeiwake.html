@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>国名クイズ</title>
+    <style>
+        body {
+        font-family: sans-serif;
+        padding: 20px;
+        }
+        input, button {
+        font-size: 16px;
+        margin-top: 10px;
+        }
+        #result {
+        margin-top: 20px;
+        font-weight: bold;
+        }
+    </style>
+    </head>
+    <body>
+
+    <h1>国名を分けましょう</h1>
+    <p id="firstPart">前半部分: </p>
+    
+    <input type="text" id="userInput" placeholder="後半を入力">
+    <br>
+    <button onclick="checkAnswer()">答え合わせ</button>
+    <button onclick="newQuiz()">次の問題</button>
+
+    <p id="result"></p>
+
+    <script src="main.js"></script>
+</body>
+</html>
