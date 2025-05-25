@@ -1,4 +1,4 @@
-const countries = ['ニッポン', 'チュウゴク', 'オーストラリア', 'インドネシア', 'アルゼンチン'];
+const countries = ['ニッポン', 'チュウゴク', 'カナダ', 'オーストラリア', 'インドネシア', 'アルゼンチン'];
 
 let currentCountry = '';
 let firstPart = '';
@@ -19,6 +19,7 @@ function newQuiz() {
     document.getElementById('firstPart').textContent = '前半部分: ' + firstPart;
     document.getElementById('userInput').value = '';
     document.getElementById('result').textContent = '';
+    document.getElementById('countryImage').style.display = 'none';
     }
 
     function checkAnswer() {
@@ -27,8 +28,16 @@ function newQuiz() {
 
     if (result === currentCountry) {
         document.getElementById('result').textContent = `OK！元の国名は：${currentCountry}`;
+
+        // 画像を表示（例: images/ニッポン.jpg）
+        const img = document.getElementById('countryImage');
+        img.src = `${currentCountry}.png`;
+        img.alt = currentCountry;
+        img.style.display = 'block';
+
     } else {
         document.getElementById('result').textContent = `アウト！正解は：${currentCountry}`;
+        document.getElementById('countryImage').style.display = 'none';
     }
 }
 
